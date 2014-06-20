@@ -1,5 +1,5 @@
 {
-    "name": "fsi/doctrine-extensions",
+    "name": "byteincoffee/doctrine-extensions",
     "type": "library",
     "description": "FSi Behavioral Doctrine Extensions",
     "keywords": ["fsi", "doctrine-extensions"],
