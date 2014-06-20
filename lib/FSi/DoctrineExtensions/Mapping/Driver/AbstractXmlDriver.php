@@ -30,9 +30,10 @@ abstract class AbstractXmlDriver extends AbstractFileDriver
         $fileLocation = $this->findMappingFile($extendedClassMetadata);
         $dom = new DOMDocument();
         $dom->load($fileLocation);
-        if (!$this->validateFile($dom)) {
-            throw new MappingException(sprintf('There are wrong mappings in xml mapping for class "%s" in file "%s"', $extendedClassMetadata->getClassName(), $fileLocation));
-        }
+        //comentado até arrumar completamente a validação
+        //if (!$this->validateFile($dom)) {
+        //    throw new MappingException(sprintf('There are wrong mappings in xml mapping for class "%s" in file "%s"', $extendedClassMetadata->getClassName(), $fileLocation));
+        //}
 
         $xmlElement = simplexml_load_file($fileLocation);
         $xmlElement = $xmlElement->children(self::DOCTRINE_NAMESPACE_URI);
